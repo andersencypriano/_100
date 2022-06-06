@@ -1,0 +1,46 @@
+.header {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    .logo {
+        font-family: 'Space Mono', monospace;
+        color: #FFF;
+    }
+    nav {
+        display: flex;
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            li {
+                color: #FFF;
+                padding: .1em 1em;
+                margin-right: .5em;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    background-color: #FFF;
+                    color: #000;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+.underLogo {
+    opacity: 1;
+    animation-name: blink;
+    animation-duration: .2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: opacity .1s;
+}
+@keyframes blink {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
